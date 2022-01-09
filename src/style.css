@@ -1,0 +1,28 @@
+:root {
+	--color-primary: #33eb2f;
+	--color-primary-light: #33ff33;
+	--color-primary-dark: #33ba26;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	background-color: #333;
+	background-image: linear-gradient(
+		to right bottom,
+		var(--color-primary-light),
+		var(--color-primary-dark)
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	/* color: #eee; */
+}
+
+.container {
+	text-align: center;
+}
