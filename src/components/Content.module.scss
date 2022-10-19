@@ -1,0 +1,10 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 50rem;
+	max-width: 120rem;
+	margin: 4rem auto;
+	border-radius: 1rem;
+	box-shadow: var(--shadow-dark);
+}
