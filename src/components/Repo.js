@@ -8,8 +8,8 @@ const Repo = props => {
 			<div className={classes.repo__lang}>
 				{props.language ? props.language : '-'}
 			</div>
-			<div className={classes.repo__stars}>{props.stargazers_count}⭐</div>
-			<a className={classes.repo__link} href={props.html_url} target="_blank">
+			<div className={classes.repo__stars}>{props.stars}⭐</div>
+			<a className={classes.repo__link} href={props.link} target="_blank">
 				link
 			</a>
 		</div>

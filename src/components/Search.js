@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import classes from './Search.module.scss';
 
-const Search = () => {
+const Search = props => {
+	const searchRef = useRef();
+
+	const submitSearchFormHandler = event => {
+		event.preventDefault();
+		props.onUserSearch(searchRef.current.value);
+	};
+
 	return (
-		<div className={classes.search}>
+		<form className={classes.search} onSubmit={submitSearchFormHandler}>
 			<input
+				ref={searchRef}
 				type="text"
 				className={classes.search__input}
 				placeholder="Search GitHub user"
 			/>
-			<button type="button" className={classes.search__button}>
+			<button type="submit" className={classes.search__button}>
 				Search
 			</button>
-		</div>
+		</form>
 	);
 };
 

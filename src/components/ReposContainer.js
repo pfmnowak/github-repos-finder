@@ -2,13 +2,12 @@ import React from 'react';
 import Repo from './Repo';
 import classes from './ReposContainer.module.scss';
 
-const ReposContainer = () => {
+const ReposContainer = props => {
 	return (
 		<div className={classes['repos-container']}>
-			<p className={classes['repos-container__message']}>
-				Search for a user to list owned repositories
-			</p>
-			<Repo name="test" language="js" stargazers_count={7} />
+			{props.repos &&
+				props.repos.length > 0 &&
+				props.repos.map(repo => <Repo key={repo.name} {...repo} />)}
 		</div>
 	);
 };
