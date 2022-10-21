@@ -9,6 +9,10 @@ const Search = props => {
 		props.onUserSearch(searchRef.current.value);
 	};
 
+	const focusInputHandler = () => {
+		searchRef.current.value = '';
+	};
+
 	return (
 		<form className={classes.search} onSubmit={submitSearchFormHandler}>
 			<input
@@ -16,6 +20,7 @@ const Search = props => {
 				type="text"
 				className={classes.search__input}
 				placeholder="Search GitHub user"
+				onFocus={focusInputHandler}
 			/>
 			<button type="submit" className={classes.search__button}>
 				Search
