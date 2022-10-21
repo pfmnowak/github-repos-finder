@@ -1,0 +1,14 @@
+.user {
+	border: 1px solid black;
+	border-radius: 1rem;
+	padding: 5rem 10rem;
+	display: flex;
+	flex-direction: column;
+
+	font-size: 2rem;
+
+	&__photo {
+		width: 7rem;
+		border-radius: 50%;
+	}
+}
