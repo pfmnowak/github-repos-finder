@@ -1,14 +1,78 @@
+@import '../sass/main.scss';
+
 .user {
-	border: 1px solid black;
-	border-radius: 1rem;
-	padding: 5rem 10rem;
+	border-radius: var(--border-radius-medium);
+	box-shadow: var(--shadow-dark);
+	padding: 5rem;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	font-size: var(--default-font-size);
 
-	font-size: 2rem;
+	@include respond(phone) {
+		padding: 3rem 2rem;
+	}
+
+	&__photo-box {
+		margin-right: 2rem;
+	}
 
 	&__photo {
 		width: 7rem;
 		border-radius: 50%;
+	}
+
+	&__bio {
+		font-size: 2rem;
+		text-align: left;
+		padding: 2rem 0;
+	}
+}
+
+.dashboard {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-left: 9rem;
+
+		@include respond(phone) {
+			margin-left: 0;
+		}
+	}
+
+	&__stats {
+		display: flex;
+		margin-left: auto;
+	}
+
+	&__info {
+		text-align: left;
+	}
+
+	&__details {
+		display: flex;
+		flex-wrap: wrap;
+		border: 1px solid black;
+		border-radius: var(--border-radius-medium);
+		background-color: var(--color-grey-medium);
+		padding: 2rem;
+		margin-bottom: 2rem;
+
+		& * {
+			flex: 0 0 50%;
+			text-align: left;
+			overflow: hidden;
+		}
+	}
+
+	&__link {
+		color: var(--color-black);
 	}
 }

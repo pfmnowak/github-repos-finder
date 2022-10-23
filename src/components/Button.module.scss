@@ -1,0 +1,23 @@
+.button {
+	padding: 1rem 4rem;
+	border: none;
+	border-radius: var(--border-radius-big);
+	background-color: var(--color-grey-light);
+	transition: 0.2s transform;
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-light);
+	}
+
+	&:focus {
+		outline: none;
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-light);
+	}
+
+	&:active {
+		transform: translateY(2px);
+	}
+}

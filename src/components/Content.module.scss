@@ -1,10 +1,14 @@
+@import '../sass/main.scss';
+
 .content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-height: 50rem;
-	max-width: 120rem;
+	max-width: 80rem;
+	margin: 4rem 2rem;
 	margin: 4rem auto;
-	border-radius: 1rem;
-	box-shadow: var(--shadow-dark);
+
+	@include respond(phone) {
+		margin: 4rem 2rem;
+	}
 }

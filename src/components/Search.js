@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Button from './Button';
 import classes from './Search.module.scss';
 
 const Search = props => {
@@ -22,9 +23,7 @@ const Search = props => {
 				placeholder="Search GitHub user"
 				onFocus={focusInputHandler}
 			/>
-			<button type="submit" className={classes.search__button}>
-				Search
-			</button>
+			<Button type="submit">Search</Button>
 		</form>
 	);
 };
