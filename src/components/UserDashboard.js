@@ -27,14 +27,23 @@ const UserDashboard = props => {
 					</a>
 				</div>
 				<div className={classes.dashboard__stats}>
-					<div className={classes.user__publicRepos}>
-						Repos: {props.user.publicRepos}
+					<div className={classes.statistic}>
+						<div className={classes.statistic__label}>Repos:</div>
+						<div className={classes.statistic__value}>
+							{props.user.publicRepos}
+						</div>
 					</div>
-					<div className={classes.user__followers}>
-						Followers: {props.user.followers}
+					<div className={classes.statistic}>
+						<div className={classes.statistic__label}>Followers:</div>
+						<div className={classes.statistic__value}>
+							{props.user.followers}
+						</div>
 					</div>
-					<div className={classes.user__following}>
-						Following: {props.user.following}
+					<div className={classes.statistic}>
+						<div className={classes.statistic__label}>Following:</div>
+						<div className={classes.statistic__value}>
+							{props.user.following}
+						</div>
 					</div>
 				</div>
 			</div>

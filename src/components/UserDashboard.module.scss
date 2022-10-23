@@ -32,7 +32,8 @@
 .dashboard {
 	&__header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
+		flex-wrap: wrap;
 	}
 
 	&__content {
@@ -49,11 +50,12 @@
 
 	&__stats {
 		display: flex;
-		margin-left: auto;
+		margin: 0 auto;
 	}
 
 	&__info {
 		text-align: left;
+		margin-right: 5rem;
 	}
 
 	&__details {
@@ -75,4 +77,8 @@
 	&__link {
 		color: var(--color-black);
 	}
+}
+
+.statistic {
+	padding: 0 1rem;
 }
