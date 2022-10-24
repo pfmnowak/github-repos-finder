@@ -82,7 +82,7 @@ const UserDashboard = props => {
 						type="button"
 						onClick={() => props.onClickFetchRepos(props.user.login)}
 					>
-						Load Repos
+						{props.reposVisible ? 'Hide repos' : 'Show Repos'}
 					</Button>
 				)}
 			</div>

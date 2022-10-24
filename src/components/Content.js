@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import useHttp from '../hooks/use-http';
+import { getAllRepositories } from '../lib/api';
 import classes from './Content.module.scss';
 import ReposContainer from './ReposContainer';
 import ReposMessage from './ReposMessage';
 import Search from './Search';
+import LoadingSpinner from './UI/LoadingSpinner';
 import UserDashboard from './UserDashboard';
 
 const Content = () => {
-	const [repos, setRepos] = useState(null);
+	const [reposVisible, setReposVisible] = useState(false);
+	const [reposLoaded, setReposLoaded] = useState(false);
 	const [gitHubUser, setGitHubUser] = useState(null);
 	const [message, setMessage] = useState('');
 	const [isError, setIsError] = useState(false);
@@ -16,6 +20,13 @@ const Content = () => {
 	useEffect(() => {
 		setMessage(defaultMessage);
 	}, []);
+
+	// const {
+	// 	sendRequest: sendUserRequest,
+	// 	status: userStatus,
+	// 	error: userError,
+	// 	data: loadedUser,
+	// } = useHttp(getUser);
 
 	const userSearchHandler = username => {
 		if (!username) {
@@ -28,37 +39,9 @@ const Content = () => {
 	const resetState = () => {
 		setMessage(defaultMessage);
 		setIsError(false);
-		setRepos(null);
+		setReposVisible(false);
+		setReposLoaded(false);
 		setGitHubUser(null);
-	};
-
-	const fetchRepos = async user => {
-		const api_call = await fetch(
-			`https://api.github.com/users/${user}/repos?per_page=100&sort=updated&order=desc`
-		);
-		const data = await api_call.json();
-		return { data };
-	};
-
-	const fetchReposHandler = async username => {
-		const { data: resData } = await fetchRepos(username);
-
-		if (!Array.isArray(resData) || resData.length === 0) {
-			return;
-		}
-
-		setRepos(
-			resData
-				.sort((a, b) => b.stargazers_count - a.stargazers_count)
-				.map(repo => {
-					return {
-						name: repo.name,
-						language: repo.language,
-						stars: repo.stargazers_count,
-						link: repo.html_url,
-					};
-				})
-		);
 	};
 
 	const fetchUser = async user => {
@@ -71,7 +54,8 @@ const Content = () => {
 
 	const getUserData = async searchedUser => {
 		const fetchedUser = await fetchUser(searchedUser);
-		setRepos(null);
+		setReposVisible(false);
+		setReposLoaded(false);
 
 		if (fetchedUser.message && fetchedUser.message === 'Not Found') {
 			setMessage('User does not exist!');
@@ -99,6 +83,58 @@ const Content = () => {
 		});
 	};
 
+	const {
+		sendRequest: sendReposRequest,
+		status: reposStatus,
+		error: reposError,
+		data: loadedRepos,
+	} = useHttp(getAllRepositories);
+
+	const fetchReposHandler = async username => {
+		if (reposVisible) {
+			setReposVisible(false);
+			return;
+		}
+		if (!reposLoaded) {
+			sendReposRequest(username);
+			setReposLoaded(true);
+		}
+		setReposVisible(true);
+	};
+
+	const renderRepos = () => {
+		let repos;
+
+		if (reposStatus === 'pending') {
+			repos = (
+				<div>
+					<LoadingSpinner />
+				</div>
+			);
+		}
+
+		if (reposStatus === 'error') {
+			repos = <p>{reposError}</p>;
+		}
+
+		if (reposStatus === 'completed' && loadedRepos && loadedRepos.length > 0) {
+			repos = <ReposContainer repos={loadedRepos} />;
+		}
+
+		if (
+			reposStatus === 'completed' &&
+			(!loadedRepos || loadedRepos.length === 0)
+		) {
+			repos = (
+				<div>
+					<p>No repositories were found!</p>
+				</div>
+			);
+		}
+
+		return repos;
+	};
+
 	return (
 		<div className={classes.content}>
 			<Search onUserSearch={userSearchHandler} />
@@ -106,10 +142,11 @@ const Content = () => {
 				<UserDashboard
 					user={gitHubUser}
 					onClickFetchRepos={fetchReposHandler}
+					reposVisible={reposVisible}
 				/>
 			)}
 			<ReposMessage message={message} isError={isError} />
-			<ReposContainer repos={repos} />
+			{reposVisible && renderRepos()}
 		</div>
 	);
 };
