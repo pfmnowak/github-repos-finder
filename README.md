@@ -1,10 +1,21 @@
 # github-repos-app
 
+This React app allows to search & view GitHub users and their public repositories.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Used technologies
+
+- React
+- SASS (SCSS)
+- JavaScript ES6 features
+- flexbox
 
 ## Running the application
 
-To test the application you can run it in Visual Studio Code using Live Server. Open a new terminal in VSC, go to "src" folder and run command live-server (if you have it installed).
+To test the application you can run it in the development mode by running `npm start` in the console.
+
+You can also test it live here: https://pfmnowak.github.io/github-repos-app/src/
 
 ## Limitations
 
@@ -12,11 +23,10 @@ To test the application you can run it in Visual Studio Code using Live Server. 
   To get all of the user repos it would be required to follow several next URLs in the HTTP Link header send with the response.
 - Unauthorized user can make up to 60 API calls per hour.
 
-## Possible improvements
+## Possible improvements ToDo
 
-- Npm and a web application bundler like Parcel or Webpack could be used.
-- CSS code can be transformed to SCSS and splited to different .scss files.
-- Besides the list of repos, some basic user info can be retrieved from API and displayed.
+- Improve the styling!
+- Add Unit Tests
 
 ## Available Scripts
 
