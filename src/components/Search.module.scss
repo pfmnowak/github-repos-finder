@@ -1,14 +1,9 @@
 .search {
-	flex: 0 0 40%;
 	display: flex;
-	width: 100%;
-	padding: 1rem 5rem;
-	margin: 4rem 0;
-	font-size: 2rem;
 	flex-wrap: wrap;
 	justify-content: center;
-	border-radius: var(--border-radius-medium);
-	box-shadow: var(--shadow-dark);
+	padding: 1rem 5rem;
+	font-size: 2rem;
 
 	&__input {
 		font-family: inherit;

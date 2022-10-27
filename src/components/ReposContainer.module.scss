@@ -1,19 +1,18 @@
 .repos-container {
-	width: 100%;
-	padding: 4rem 0rem;
-}
+	margin: 2rem 0rem;
 
-.repos-container__message {
-	text-align: center;
-	font-size: 3.5rem;
-	font-weight: 600;
-	color: var(--color-primary);
-	font-style: italic;
-}
+	&__message {
+		text-align: center;
+		font-size: 3.5rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		font-style: italic;
 
-.repos-container__message--error {
-	font-weight: 900;
-	color: var(--color-error);
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: black;
+		&--error {
+			font-weight: 900;
+			color: var(--color-error);
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: black;
+		}
+	}
 }

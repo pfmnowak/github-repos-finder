@@ -5,6 +5,7 @@ import classes from './Content.module.scss';
 import ReposContainer from './ReposContainer';
 import ReposMessage from './ReposMessage';
 import Search from './Search';
+import Card from './UI/Card';
 import LoadingSpinner from './UI/LoadingSpinner';
 import UserDashboard from './UserDashboard';
 
@@ -67,11 +68,13 @@ const Content = () => {
 		if (userStatus === 'completed' && loadedUser) {
 			return (
 				<>
-					<UserDashboard
-						user={loadedUser}
-						onClickFetchRepos={fetchReposHandler}
-						reposVisible={reposVisible}
-					/>
+					<Card>
+						<UserDashboard
+							user={loadedUser}
+							onClickFetchRepos={fetchReposHandler}
+							reposVisible={reposVisible}
+						/>
+					</Card>
 				</>
 			);
 		}
@@ -112,7 +115,9 @@ const Content = () => {
 
 	return (
 		<div className={classes.content}>
-			<Search onUserSearch={userSearchHandler} />
+			<Card>
+				<Search onUserSearch={userSearchHandler} />
+			</Card>
 			{!userVisible && (
 				<ReposMessage
 					message={'Search for a user to list owned repositories'}

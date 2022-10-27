@@ -1,12 +1,9 @@
 @import '../sass/main.scss';
 
 .dashboard {
-	border-radius: var(--border-radius-medium);
-	box-shadow: var(--shadow-dark);
-	padding: 5rem;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	padding: 5rem;
 	font-size: var(--default-font-size);
 
 	@include respond(phone) {
