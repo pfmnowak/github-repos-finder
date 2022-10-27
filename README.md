@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To test the application you can run it in the development mode by running `npm start` in the console.
 
-You can also test it live here: https://pfmnowak.github.io/github-repos-app/src/
+You can also test it live here: https://pfmnowak.github.io/github-repos-finder/
 
 ## Limitations
 
