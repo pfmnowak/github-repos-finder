@@ -1,0 +1,52 @@
+.repo {
+	display: flex;
+	justify-content: space-around;
+	color: var(--color-grey-dark);
+	font-size: 2rem;
+	margin: 1rem 0;
+	border-radius: var(--border-radius-medium);
+	background-color: var(--color-primary);
+
+	&:hover {
+		background-color: var(--color-grey-dark);
+		color: var(--color-primary);
+	}
+
+	& > * {
+		color: inherit;
+		border-right: 1px solid var(--color-grey-medium);
+		padding: 1.1rem;
+	}
+
+	&__name {
+		flex-grow: 1;
+		flex-shrink: 1;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding-left: 1.5rem;
+	}
+
+	&__lang {
+		width: 10rem;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	&__stars {
+		width: 7.5rem;
+		text-align: right;
+		overflow: hidden;
+	}
+
+	&__link {
+		width: 6rem;
+		text-align: center;
+		border-right: none;
+
+		&:focus {
+			outline: none;
+			font-weight: 600;
+		}
+	}
+}
