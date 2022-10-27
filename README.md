@@ -1,4 +1,4 @@
-# github-repos-app
+# github-repos-finder
 
 This React app allows to search & view GitHub users and their public repositories.
 
