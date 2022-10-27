@@ -5,7 +5,11 @@ export async function getUser(username) {
 	const data = await response.json();
 
 	if (!response.ok) {
-		throw new Error(data.message || 'Could not fetch the user.');
+		throw new Error(
+			data.message && data.message === 'Not Found'
+				? 'User does not exist!'
+				: 'Could not fetch the user.'
+		);
 	}
 
 	const loadedUser = {
