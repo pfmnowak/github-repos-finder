@@ -1,0 +1,45 @@
+.footer {
+	padding: 1rem;
+	margin: 2rem auto;
+
+	&__link {
+		white-space: nowrap;
+		text-decoration: none;
+		color: #fb000d;
+		position: relative;
+		padding-bottom: 0.3rem;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0%;
+			height: 100%;
+			border-bottom: 2px solid #fb000d;
+			transition: width 0.3s ease;
+		}
+
+		&:hover:after {
+			left: 0;
+			width: 100%;
+			transition: width 0.3s ease;
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	&__copyright {
+		color: white;
+		border-top: 1px solid #4b4b4b;
+		border-top: 1px solid white;
+		padding-top: 2rem;
+		flex: 0 0 60%;
+		text-align: center;
+		line-height: 200%;
+	}
+}

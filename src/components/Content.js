@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useHttp from '../hooks/use-http';
 import { getAllRepositories, getUser } from '../lib/api';
 import classes from './Content.module.scss';
+import Footer from './Footer/Footer';
 import ReposContainer from './ReposContainer';
 import ReposMessage from './ReposMessage';
 import Search from './Search';
@@ -125,6 +126,9 @@ const Content = () => {
 			)}
 			{userVisible && renderUser()}
 			{reposVisible && renderRepos()}
+			<Card>
+				<Footer />
+			</Card>
 		</div>
 	);
 };
