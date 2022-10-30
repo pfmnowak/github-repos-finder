@@ -12,6 +12,7 @@ const UserDashboard = props => {
 						className={classes.dashboard__photo}
 						src={props.user.avatarUrl}
 						alt="User's profile pic"
+						title="User's profile pic"
 					/>
 				</div>
 				<div className={classes.dashboard__info}>
