@@ -1,0 +1,28 @@
+.inline-link {
+	white-space: nowrap;
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 0.3rem;
+	color: var(--color-primary);
+
+	&:hover {
+		color: var(--color-primary-dark);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0%;
+		height: 100%;
+		border-bottom: 2px solid var(--color-primary);
+		transition: width 0.3s ease;
+	}
+
+	&:hover:after {
+		left: 0;
+		width: 100%;
+		transition: width 0.3s ease;
+	}
+}

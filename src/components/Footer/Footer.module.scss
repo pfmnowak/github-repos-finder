@@ -2,34 +2,6 @@
 	padding: 1rem;
 	margin: 2rem auto;
 
-	&__link {
-		white-space: nowrap;
-		text-decoration: none;
-		color: var(--color-tertiary-dark);
-		position: relative;
-		padding-bottom: 0.3rem;
-
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: 0%;
-			height: 100%;
-			border-bottom: 2px solid var(--color-primary);
-			transition: width 0.3s ease;
-		}
-
-		&:hover {
-			color: var(--color-tertiary);
-		}
-		&:hover:after {
-			left: 0;
-			width: 100%;
-			transition: width 0.3s ease;
-		}
-	}
-
 	&__info {
 		display: flex;
 		justify-content: center;
@@ -37,7 +9,7 @@
 	}
 
 	&__copyright {
-		border-top: 1px solid var(--color-tertiary-light);
+		border-top: 1px solid var(--color-primary);
 		padding-top: 2rem;
 		flex: 0 0 60%;
 		text-align: center;

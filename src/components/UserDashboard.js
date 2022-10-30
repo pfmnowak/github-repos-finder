@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import InlineLink from './InlineLink';
 import classes from './UserDashboard.module.scss';
 
 const UserDashboard = props => {
@@ -17,14 +18,12 @@ const UserDashboard = props => {
 					<div className={classes.dashboard__name}>
 						{props.user.name ? props.user.name : '-'}
 					</div>
-					<a
-						className={`${classes.dashboard__profileUrl} ${classes.dashboard__link}`}
-						href={props.user.profileUrl}
-						target="_blank"
-						rel="noreferrer"
+					<InlineLink
+						link={props.user.profileUrl}
+						title="User's profile on GitHub"
 					>
 						@{props.user.login}
-					</a>
+					</InlineLink>
 				</div>
 				<div className={classes.dashboard__stats}>
 					<div className={classes.statistic}>
@@ -58,14 +57,9 @@ const UserDashboard = props => {
 					<div className={classes.dashboard__blogUrl}>
 						Page:{' '}
 						{props.user.blogUrl ? (
-							<a
-								className={classes.dashboard__link}
-								href={props.user.blogUrl}
-								target="_blank"
-								rel="noreferrer"
-							>
+							<InlineLink link={props.user.blogUrl} title="User's web page">
 								{props.user.blogUrl}
-							</a>
+							</InlineLink>
 						) : (
 							'-'
 						)}

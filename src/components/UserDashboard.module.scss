@@ -62,16 +62,6 @@
 		}
 	}
 
-	&__link {
-		color: var(--color-secondary-dark);
-
-		&:hover {
-			// color: inherit;
-			// color: var(--color-primary-dark);
-			color: var(--color-tertiary-dark);
-		}
-	}
-
 	&__button {
 		display: flex;
 		justify-content: center;

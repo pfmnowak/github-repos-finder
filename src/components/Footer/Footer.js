@@ -1,3 +1,4 @@
+import InlineLink from '../InlineLink';
 import classes from './Footer.module.scss';
 import Social from './Social';
 
@@ -8,13 +9,9 @@ const Footer = () => {
 			<div className={classes.footer__info}>
 				<p className={classes.footer__copyright}>
 					Copyright &copy; 2022. Designed & built by{' '}
-					<a
-						href="https://pfmnowak.github.io/"
-						className={classes.footer__link}
-						title="Author's page"
-					>
+					<InlineLink link="https://pfmnowak.github.io/" title="Author's page">
 						Mikołaj Nowak
-					</a>
+					</InlineLink>
 				</p>
 			</div>
 		</footer>
