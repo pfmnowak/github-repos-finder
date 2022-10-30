@@ -8,7 +8,7 @@
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
-		color: inherit;
+		color: var(--color-secondary-dark);
 		border: none;
 		border-radius: var(--border-radius-big);
 		padding: 0.9rem 2rem;
@@ -19,7 +19,7 @@
 
 		&:focus {
 			outline: none;
-			background-color: var(--color-grey-light);
+			background-color: var(--color-tertiary);
 			box-shadow: var(--shadow-light);
 		}
 	}

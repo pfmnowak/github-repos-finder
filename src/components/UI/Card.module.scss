@@ -2,4 +2,13 @@
 	margin: 2rem 0;
 	border-radius: var(--border-radius-medium);
 	box-shadow: var(--shadow-dark);
+
+	overflow: hidden;
+	// background-color: var(--color-secondary-light);
+	// background-color: var(--color-secondary);
+	background-image: linear-gradient(
+		to right top,
+		var(--color-secondary-dark),
+		var(--color-secondary)
+	);
 }

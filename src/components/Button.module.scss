@@ -2,18 +2,18 @@
 	padding: 1rem 4rem;
 	border: none;
 	border-radius: var(--border-radius-big);
-	background-color: var(--color-grey-light);
+	background-color: var(--color-tertiary);
 	transition: 0.2s transform;
 
 	&:hover {
 		cursor: pointer;
-		background-color: var(--color-white);
+		background-color: var(--color-tertiary-light);
 		box-shadow: var(--shadow-light);
 	}
 
 	&:focus {
 		outline: none;
-		background-color: var(--color-white);
+		background-color: var(--color-tertiary-light);
 		box-shadow: var(--shadow-light);
 	}
 

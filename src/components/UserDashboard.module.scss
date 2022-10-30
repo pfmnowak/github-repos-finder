@@ -51,7 +51,7 @@
 		flex-wrap: wrap;
 		border: 1px solid black;
 		border-radius: var(--border-radius-medium);
-		background-color: var(--color-grey-medium);
+		background-color: var(--color-secondary);
 		padding: 2rem;
 		margin-bottom: 2rem;
 
@@ -63,7 +63,13 @@
 	}
 
 	&__link {
-		color: var(--color-black);
+		color: var(--color-secondary-dark);
+
+		&:hover {
+			// color: inherit;
+			// color: var(--color-primary-dark);
+			color: var(--color-tertiary-dark);
+		}
 	}
 
 	&__button {
