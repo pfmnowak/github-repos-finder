@@ -63,7 +63,7 @@ const Content = () => {
 		}
 
 		if (userStatus === 'error') {
-			return <p>{userError}</p>;
+			return <p className="u-center-text">{userError}</p>;
 		}
 
 		if (userStatus === 'completed' && loadedUser) {
@@ -93,7 +93,7 @@ const Content = () => {
 		}
 
 		if (reposStatus === 'error') {
-			repos = <p>{reposError}</p>;
+			repos = <p className="u-center-text">{reposError}</p>;
 		}
 
 		if (reposStatus === 'completed' && loadedRepos && loadedRepos.length > 0) {
@@ -106,7 +106,7 @@ const Content = () => {
 		) {
 			repos = (
 				<div>
-					<p>No repositories were found!</p>
+					<p className="u-center-text">No repositories were found!</p>
 				</div>
 			);
 		}
