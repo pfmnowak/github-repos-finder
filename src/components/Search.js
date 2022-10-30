@@ -23,7 +23,9 @@ const Search = props => {
 				placeholder="Search GitHub user"
 				onFocus={focusInputHandler}
 			/>
-			<Button type="submit">Search</Button>
+			<div className={classes.search__button}>
+				<Button type="submit">Search</Button>
+			</div>
 		</form>
 	);
 };
