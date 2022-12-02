@@ -8,9 +8,11 @@ const Search = props => {
 	const submitSearchFormHandler = event => {
 		event.preventDefault();
 		props.onUserSearch(searchRef.current.value);
+		searchRef.current.blur();
 	};
 
 	const focusInputHandler = () => {
+		if (!searchRef.current) return;
 		searchRef.current.value = '';
 	};
 
@@ -22,6 +24,7 @@ const Search = props => {
 				className={classes.search__input}
 				placeholder="Search GitHub user"
 				onFocus={focusInputHandler}
+				autoFocus
 			/>
 			<div className={classes.search__button}>
 				<Button type="submit">Search</Button>

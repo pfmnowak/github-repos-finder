@@ -15,6 +15,7 @@ const Content = () => {
 	const [reposVisible, setReposVisible] = useState(false);
 	const [reposLoaded, setReposLoaded] = useState(false);
 
+	// console.log(event);
 	const {
 		sendRequest: sendUserRequest,
 		status: userStatus,
