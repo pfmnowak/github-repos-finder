@@ -20,7 +20,7 @@ const Search = props => {
 		<form className={classes.search} onSubmit={submitSearchFormHandler}>
 			<input
 				ref={searchRef}
-				type="text"
+				type="search"
 				className={classes.search__input}
 				placeholder="Search GitHub user"
 				onFocus={focusInputHandler}

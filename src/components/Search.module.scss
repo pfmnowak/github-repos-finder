@@ -18,6 +18,30 @@
 			outline: none;
 			box-shadow: var(--shadow-light);
 		}
+
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			height: 1rem;
+			width: 1rem;
+			background: linear-gradient(
+					45deg,
+					transparent 0%,
+					transparent 43%,
+					var(--color-primary) 45%,
+					var(--color-primary) 55%,
+					transparent 57%,
+					transparent 100%
+				),
+				linear-gradient(
+					135deg,
+					transparent 0%,
+					transparent 43%,
+					var(--color-primary) 45%,
+					var(--color-primary) 55%,
+					transparent 57%,
+					transparent 100%
+				);
+		}
 	}
 
 	&__button {
