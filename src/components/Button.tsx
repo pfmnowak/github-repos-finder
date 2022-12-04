@@ -1,7 +1,13 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import classes from './Button.module.scss';
 
-const Button = props => {
+type ButtonProps = {
+	onClick?: () => void;
+	type: 'button' | 'submit' | 'reset' | undefined;
+	children?: ReactNode;
+};
+
+const Button = (props: ButtonProps) => {
 	return (
 		<button
 			className={classes.button}

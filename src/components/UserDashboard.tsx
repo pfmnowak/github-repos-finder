@@ -1,9 +1,28 @@
-import React from 'react';
 import Button from './Button';
 import InlineLink from './InlineLink';
 import classes from './UserDashboard.module.scss';
 
-const UserDashboard = props => {
+type UserDashboardProps = {
+	user: {
+		avatarUrl: string;
+		login: string;
+		name: string;
+		bio: string;
+		location: string;
+		blogUrl: string;
+		profileUrl: string;
+		publicRepos: number;
+		followers: string;
+		following: string;
+		email: string;
+		company: string;
+		twitterUsername: string;
+	};
+	onClickFetchRepos: (username: string) => void;
+	reposVisible: boolean;
+};
+
+const UserDashboard = (props: UserDashboardProps) => {
 	return (
 		<div className={classes.dashboard}>
 			<div className={classes.dashboard__header}>

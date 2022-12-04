@@ -1,8 +1,18 @@
-import React from 'react';
 import Repo from './Repo';
 import classes from './ReposContainer.module.scss';
 
-const ReposContainer = props => {
+type ReposContainerProps = {
+	repos: [
+		{
+			link: string;
+			name: string;
+			language: string;
+			stars: number;
+		}
+	];
+};
+
+const ReposContainer = (props: ReposContainerProps) => {
 	return (
 		<div className={classes['repos-container']}>
 			{props.repos &&

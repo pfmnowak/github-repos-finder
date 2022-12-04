@@ -1,8 +1,14 @@
-import React from 'react';
 import InlineLink from './InlineLink';
 import classes from './Repo.module.scss';
 
-const Repo = props => {
+type RepoProps = {
+	link: string;
+	name: string;
+	language: string;
+	stars: number;
+};
+
+const Repo = (props: RepoProps) => {
 	return (
 		<div className={classes.repo}>
 			<div className={classes.repo__name}>

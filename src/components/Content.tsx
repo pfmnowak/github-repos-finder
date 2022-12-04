@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useHttp from '../hooks/use-http';
 import { getAllRepositories, getUser } from '../lib/api';
 import classes from './Content.module.scss';
@@ -15,7 +15,6 @@ const Content = () => {
 	const [reposVisible, setReposVisible] = useState(false);
 	const [reposLoaded, setReposLoaded] = useState(false);
 
-	// console.log(event);
 	const {
 		sendRequest: sendUserRequest,
 		status: userStatus,
@@ -30,7 +29,7 @@ const Content = () => {
 		data: loadedRepos,
 	} = useHttp(getAllRepositories);
 
-	const userSearchHandler = username => {
+	const userSearchHandler = (username: string) => {
 		setReposVisible(false);
 		setReposLoaded(false);
 
@@ -42,7 +41,7 @@ const Content = () => {
 		sendUserRequest(username);
 	};
 
-	const fetchReposHandler = async username => {
+	const fetchReposHandler = async (username: string) => {
 		if (reposVisible) {
 			setReposVisible(false);
 			return;

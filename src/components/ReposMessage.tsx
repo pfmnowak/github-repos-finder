@@ -1,7 +1,11 @@
-import React from 'react';
 import classes from './ReposContainer.module.scss';
 
-const ReposMessage = props => {
+type ReposMessageProps = {
+	isError?: boolean;
+	message: string;
+};
+
+const ReposMessage = (props: ReposMessageProps) => {
 	return (
 		<p
 			className={`${classes['repos-container__message']} ${

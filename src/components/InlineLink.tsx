@@ -1,6 +1,13 @@
+import { ReactNode } from 'react';
 import classes from './InlineLink.module.scss';
 
-const InlineLink = props => {
+type InlineLinkProps = {
+	link: string;
+	title: string;
+	children?: ReactNode;
+};
+
+const InlineLink = (props: InlineLinkProps) => {
 	return (
 		<a
 			href={props.link}

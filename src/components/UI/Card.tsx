@@ -1,6 +1,11 @@
+import { ReactNode } from 'react';
 import classes from './Card.module.scss';
 
-const Card = props => {
+type CardProps = {
+	children?: ReactNode;
+};
+
+const Card = (props: CardProps) => {
 	return <div className={classes.card}>{props.children}</div>;
 };
 
