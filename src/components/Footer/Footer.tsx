@@ -12,6 +12,23 @@ const Footer = () => {
 					<InlineLink link="https://pfmnowak.github.io/" title="Author's page">
 						Mikołaj Nowak
 					</InlineLink>
+					.
+					<br />
+					Background GitHub logo image by{' '}
+					<InlineLink
+						link="https://unsplash.com/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						title="Image author"
+					>
+						Rubaitul Azad
+					</InlineLink>{' '}
+					on{' '}
+					<InlineLink
+						link="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						title="Unsplash page"
+					>
+						Unsplash
+					</InlineLink>
+					.
 				</p>
 			</div>
 		</footer>

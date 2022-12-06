@@ -5,9 +5,14 @@
 	flex-direction: column;
 	padding: 5rem;
 	font-size: var(--default-font-size);
+	position: relative;
 
 	@include respond(phone) {
 		padding: 3rem 2rem;
+	}
+
+	&__container {
+		z-index: 1;
 	}
 
 	&__photo-box {
@@ -50,11 +55,12 @@
 	&__details {
 		display: flex;
 		flex-wrap: wrap;
-		border: 1px solid black;
+		border: 2px solid var(--color-secondary-dark);
 		border-radius: var(--border-radius-medium);
-		background-color: var(--color-secondary);
+		box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 		padding: 2rem;
 		margin-bottom: 2rem;
+		overflow: hidden;
 
 		& * {
 			flex: 0 0 50%;

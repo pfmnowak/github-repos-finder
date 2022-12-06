@@ -1,15 +1,17 @@
 # github-repos-finder
 
-This React app allows to search & view GitHub users and their public repositories.
+This TypeScript React app allows to search & view GitHub users and their public repositories.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Used technologies
 
 - React
+- TypeScript
 - SASS (SCSS)
 - JavaScript ES6 features
 - flexbox
+- SVG
 
 ## Running the application
 
