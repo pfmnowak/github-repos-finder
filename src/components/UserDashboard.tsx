@@ -1,4 +1,3 @@
-import Button from './Button';
 import InlineLink from './InlineLink';
 import BackgroundImage from './UI/BackgroundImage';
 import classes from './UserDashboard.module.scss';
@@ -24,6 +23,8 @@ type UserDashboardProps = {
 };
 
 const UserDashboard = (props: UserDashboardProps) => {
+	const buttonText = props.reposVisible ? 'Hide' : 'Show';
+
 	return (
 		<div className={classes.dashboard}>
 			<BackgroundImage
@@ -99,13 +100,18 @@ const UserDashboard = (props: UserDashboardProps) => {
 						</div>
 					</div>
 					{props.user.publicRepos > 0 && (
-						<div className={classes.dashboard__button}>
-							<Button
-								type="button"
+						<div className={classes.dashboard__cta}>
+							<button
+								className={classes.dashboard__button}
 								onClick={() => props.onClickFetchRepos(props.user.login)}
 							>
-								{props.reposVisible ? 'Hide repos' : 'Show Repos'}
-							</Button>
+								<span className={classes.first_word} data-hover={buttonText}>
+									{buttonText}
+								</span>
+								<span className={classes.last_word} data-hover="Repos">
+									Repos
+								</span>
+							</button>
 						</div>
 					)}
 				</div>
