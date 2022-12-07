@@ -1,3 +1,5 @@
+@import '../sass/main.scss';
+
 .inline-link {
 	white-space: nowrap;
 	text-decoration: none;
@@ -17,12 +19,12 @@
 		width: 0%;
 		height: 100%;
 		border-bottom: 2px solid var(--color-primary);
-		transition: width 0.3s ease;
+		@include transition(width, 0.3s, ease);
 	}
 
 	&:hover:after {
 		left: 0;
 		width: 100%;
-		transition: width 0.3s ease;
+		@include transition(width, 0.3s, ease);
 	}
 }

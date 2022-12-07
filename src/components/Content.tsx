@@ -4,7 +4,6 @@ import { getAllRepositories, getUser } from '../lib/api';
 import classes from './Content.module.scss';
 import Footer from './Footer/Footer';
 import ReposContainer from './ReposContainer';
-import ReposMessage from './ReposMessage';
 import Search from './Search';
 import Card from './UI/Card';
 import LoadingSpinner from './UI/LoadingSpinner';
@@ -120,9 +119,28 @@ const Content = () => {
 				<Search onUserSearch={userSearchHandler} />
 			</Card>
 			{!userVisible && (
-				<ReposMessage
-					message={'Search for a user to list owned repositories'}
-				/>
+				<Card>
+					<div id="container" className={classes['container']}>
+						<p>
+							Search for a user to list owned repositories. Don't have any
+							ideas?
+						</p>
+						<button
+							className={classes['slide-button']}
+							onClick={() => userSearchHandler('pfmnowak')}
+						>
+							<span
+								className={classes['slide-button__circle']}
+								aria-hidden="true"
+							>
+								<span className={classes['slide-button__arrow']}></span>
+							</span>
+							<span className={classes['slide-button__text']}>
+								Load my account
+							</span>
+						</button>
+					</div>
+				</Card>
 			)}
 			{userVisible && renderUser()}
 			{reposVisible && renderRepos()}

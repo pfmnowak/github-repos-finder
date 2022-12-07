@@ -1,18 +1,3 @@
 .repos-container {
 	margin: 2rem 0rem;
-
-	&__message {
-		text-align: center;
-		font-size: 3.5rem;
-		font-weight: 600;
-		color: var(--color-primary);
-		font-style: italic;
-
-		&--error {
-			font-weight: 900;
-			color: var(--color-error);
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: black;
-		}
-	}
 }
