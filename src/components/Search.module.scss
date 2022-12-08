@@ -2,12 +2,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 2rem;
+	font-size: var(--font-size-large);
 
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
-		color: var(--color-primary);
+		color: var(--color-primary-light);
 		background-color: transparent;
 		border: none;
 		outline: none;
@@ -27,8 +27,8 @@
 					45deg,
 					transparent 0%,
 					transparent 43%,
-					var(--color-primary) 45%,
-					var(--color-primary) 55%,
+					var(--color-primary-light) 45%,
+					var(--color-primary-light) 55%,
 					transparent 57%,
 					transparent 100%
 				),
@@ -36,8 +36,8 @@
 					135deg,
 					transparent 0%,
 					transparent 43%,
-					var(--color-primary) 45%,
-					var(--color-primary) 55%,
+					var(--color-primary-light) 45%,
+					var(--color-primary-light) 55%,
 					transparent 57%,
 					transparent 100%
 				);

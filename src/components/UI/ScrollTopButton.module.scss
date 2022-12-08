@@ -8,7 +8,7 @@
 	outline: none;
 	border: none;
 	border-radius: 50%;
-	background-color: var(--color-primary);
+	background-color: var(--color-primary-light);
 	width: 6rem;
 	height: 6rem;
 	padding: 1.7rem;
@@ -30,7 +30,7 @@
 	}
 
 	&:hover &__arrow {
-		fill: var(--color-primary-dark);
+		fill: var(--color-primary);
 	}
 
 	&:active {

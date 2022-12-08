@@ -26,7 +26,7 @@
 	}
 
 	&__bio {
-		font-size: 2rem;
+		font-size: var(--font-size-large);
 		text-align: left;
 		padding: 2rem 0;
 	}
@@ -79,7 +79,8 @@
 		background: transparent;
 		border: none;
 		cursor: pointer;
-		font-size: 2.6rem;
+		font-size: var(--font-size-xl);
+
 		box-shadow: 0px 15px 10px -10px #fff;
 
 		&:active {
@@ -99,17 +100,17 @@
 		}
 		.first_word {
 			margin-right: 0.5rem;
-			color: var(--color-primary-dark);
+			color: var(--color-primary);
 			&:before {
 				top: 100%;
-				color: var(--color-tertiary);
+				color: var(--color-tertiary-light);
 			}
 		}
 		.last_word {
-			color: var(--color-tertiary);
+			color: var(--color-tertiary-light);
 			&:before {
 				bottom: 100%;
-				color: var(--color-primary-dark);
+				color: var(--color-primary);
 			}
 		}
 		&:hover {

@@ -1,6 +1,6 @@
 .repo {
 	display: flex;
-	font-size: 2rem;
+	font-size: var(--font-size-large);
 	margin: 1rem 0;
 	border-radius: var(--border-radius-medium);
 
@@ -12,13 +12,13 @@
 	);
 
 	&:hover {
-		color: var(--color-tertiary-dark);
+		color: var(--color-tertiary);
 		background-image: none;
 		background-color: var(--color-secondary-dark);
 	}
 
 	&:hover &__name a {
-		color: var(--color-primary);
+		color: var(--color-primary-light);
 	}
 
 	& > * {

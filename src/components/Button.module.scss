@@ -5,17 +5,15 @@
 	border: none;
 	border-radius: var(--border-radius-big);
 	@include transition(transform, 0.2s, ease);
-	// background-color: var(--color-primary);
-	background-color: var(--color-primary-dark);
+	background-color: var(--color-primary);
 	color: var(--color-secondary-dark);
 	font-weight: 700;
 
 	&:hover {
 		cursor: pointer;
 		box-shadow: var(--shadow-light);
-		background-color: var(--color-secondary-dark);
-		// color: var(--color-primary);
-		color: var(--color-primary-dark);
+		background-color: var(--color-tertiary-light);
+		color: var(--color-primary);
 	}
 
 	&:focus {

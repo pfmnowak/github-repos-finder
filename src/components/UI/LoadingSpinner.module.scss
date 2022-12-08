@@ -15,9 +15,9 @@
 		height: 6.4rem;
 		margin: 0.8rem;
 		border-radius: 50%;
-		border: 0.6rem solid var(--color-primary);
-		border-color: var(--color-primary) transparent var(--color-primary)
-			transparent;
+		border: 0.6rem solid var(--color-primary-dark);
+		border-color: var(--color-primary-dark) transparent
+			var(--color-primary-dark) transparent;
 		animation: spinner 1.2s linear infinite;
 	}
 }
