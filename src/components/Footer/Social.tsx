@@ -1,4 +1,4 @@
-import IconSvg from './IconSvg';
+import IconSvg from '../UI/IconSvg';
 import classes from './Social.module.scss';
 
 const Social = () => {

@@ -1,4 +1,4 @@
-import Icons from './icons/sprite.svg';
+import Icons from '../../icons/sprite.svg';
 
 type IconSvgProps = {
 	className: string;
