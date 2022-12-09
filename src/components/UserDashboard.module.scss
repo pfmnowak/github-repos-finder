@@ -61,12 +61,30 @@
 		padding: 2rem;
 		margin-bottom: 2rem;
 		overflow: hidden;
+	}
 
-		& * {
-			flex: 0 0 50%;
-			text-align: left;
-			overflow: hidden;
+	&__detail {
+		flex: 0 0 50%;
+		text-align: left;
+		overflow: hidden;
+		display: flex;
+		margin: 1rem 0;
+
+		@include respond(phone) {
+			flex: 0 0 100%;
 		}
+
+		&:hover &__detail-icon {
+			fill: var(--color-primary-dark);
+		}
+	}
+
+	&__detail-icon {
+		flex: 0 0 auto;
+		width: 3rem;
+		height: 3rem;
+		fill: var(--color-primary);
+		margin-right: 1rem;
 	}
 
 	&__cta {

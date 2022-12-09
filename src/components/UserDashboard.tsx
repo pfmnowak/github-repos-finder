@@ -1,5 +1,6 @@
 import InlineLink from './InlineLink';
 import BackgroundImage from './UI/BackgroundImage';
+import IconSvg from './UI/IconSvg';
 import classes from './UserDashboard.module.scss';
 
 type UserDashboardProps = {
@@ -79,11 +80,18 @@ const UserDashboard = (props: UserDashboardProps) => {
 						{props.user.bio ? props.user.bio : 'User has no bio'}
 					</div>
 					<div className={classes.dashboard__details}>
-						<div className={classes.dashboard__location}>
-							Location: {props.user.location ? props.user.location : '-'}
+						<div className={classes.dashboard__detail}>
+							<IconSvg
+								className={classes['dashboard__detail-icon']}
+								name="icon-location"
+							/>
+							{props.user.location ? props.user.location : '-'}
 						</div>
-						<div className={classes.dashboard__blogUrl}>
-							Page:{' '}
+						<div className={classes.dashboard__detail}>
+							<IconSvg
+								className={classes['dashboard__detail-icon']}
+								name="icon-link"
+							/>
 							{props.user.blogUrl ? (
 								<InlineLink link={props.user.blogUrl} title="User's web page">
 									{props.user.blogUrl}
@@ -92,11 +100,20 @@ const UserDashboard = (props: UserDashboardProps) => {
 								'-'
 							)}
 						</div>
-						<div className={classes.dashboard__email}>
-							email: {props.user.email ? props.user.email : '-'}
+						<div className={classes.dashboard__detail}>
+							<IconSvg
+								className={classes['dashboard__detail-icon']}
+								name="icon-mail"
+								// name="icon-twitter"
+							/>
+							{props.user.email ? props.user.email : '-'}
 						</div>
-						<div className={classes.dashboard__company}>
-							Company: {props.user.company ? props.user.company : '-'}
+						<div className={classes.dashboard__detail}>
+							<IconSvg
+								className={classes['dashboard__detail-icon']}
+								name="icon-briefcase"
+							/>
+							{props.user.company ? props.user.company : '-'}
 						</div>
 					</div>
 					{props.user.publicRepos > 0 && (
