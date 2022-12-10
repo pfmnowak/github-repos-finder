@@ -10,15 +10,22 @@
 		padding: 1rem;
 		background-color: var(--color-tertiary);
 		border-radius: 50%;
+		transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			background-color: var(--color-secondary-dark);
+			fill: var(--color-tertiary-light);
+			box-shadow: var(--shadow-white);
+		}
+
+		&:active {
+			transform: translateY(2px);
+		}
 
 		@include respond(phone) {
 			width: 4.5rem;
 			height: 4.5rem;
 			padding: 0.8rem;
-		}
-
-		&:hover {
-			background-color: var(--color-tertiary-light);
 		}
 	}
 

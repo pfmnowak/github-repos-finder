@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import Button from './Button';
 import classes from './Search.module.scss';
+import SearchButton from './SearchButton';
 
 type SearchProps = {
 	onUserSearch: (username: string) => void;
@@ -30,9 +30,7 @@ const Search = (props: SearchProps) => {
 				onFocus={focusInputHandler}
 				autoFocus
 			/>
-			<div className={classes.search__button}>
-				<Button type="submit">Search</Button>
-			</div>
+			<SearchButton />
 		</form>
 	);
 };

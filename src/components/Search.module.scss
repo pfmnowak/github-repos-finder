@@ -1,3 +1,5 @@
+@import '../sass/main.scss';
+
 .search {
 	display: flex;
 	justify-content: center;
@@ -11,12 +13,12 @@
 		background-color: transparent;
 		border: none;
 		outline: none;
-		flex: 1;
+		flex: 1 1 auto;
+		min-width: 0;
 		padding: 1rem 2rem;
 
 		&:focus {
 			outline: none;
-			box-shadow: var(--shadow-light);
 		}
 
 		&::-webkit-search-cancel-button {
@@ -42,10 +44,6 @@
 					transparent 100%
 				);
 		}
-	}
-
-	&__button {
-		margin-right: 1rem;
 	}
 }
 

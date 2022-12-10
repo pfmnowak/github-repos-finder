@@ -9,7 +9,7 @@
 
 	@include respond(phone) {
 		width: auto;
-		margin: 4rem 2rem;
+		margin: 2rem;
 	}
 }
 
@@ -33,9 +33,14 @@
 	font-size: inherit;
 	font-family: inherit;
 	width: 15rem;
+	transition: transform 0.2s ease;
+
+	&:active {
+		transform: translateY(2px);
+	}
 
 	&__circle {
-		@include transition();
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 		position: relative;
 		display: block;
 		width: 3rem;
@@ -45,7 +50,7 @@
 	}
 
 	&__arrow {
-		@include transition();
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -69,7 +74,7 @@
 	}
 
 	&__text {
-		@include transition();
+		transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 		position: absolute;
 		top: 0;
 		left: 0;

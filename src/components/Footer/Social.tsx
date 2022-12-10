@@ -8,6 +8,8 @@ const Social = () => {
 				href="https://github.com/pfmnowak/github-repos-finder"
 				className={classes.social__link}
 				title="GitHub Repo with the code"
+				target="_blank"
+				rel="noreferrer"
 			>
 				<IconSvg name="icon-github" className={classes.social__icon} />
 			</a>

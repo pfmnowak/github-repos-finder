@@ -19,12 +19,11 @@
 		width: 0%;
 		height: 100%;
 		border-bottom: 2px solid var(--color-primary-light);
-		@include transition(width, 0.3s, ease);
+		transition: width 0.3s ease;
 	}
 
 	&:hover:after {
 		left: 0;
 		width: 100%;
-		@include transition(width, 0.3s, ease);
 	}
 }

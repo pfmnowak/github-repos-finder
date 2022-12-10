@@ -13,7 +13,9 @@
 
 	// SHADOWS
 	--shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-	--shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+	--shadow-white: 0 0.2rem 1rem -0.2rem #fff;
+	--shadow-white-underline: 0px 15px 10px -10px #fff;
+	--shadow-white-underline-big: 0 1rem 1.3rem -0.6rem #fff;
 
 	// FONT
 	--default-font-size: 1.6rem;
@@ -21,11 +23,5 @@
 	--font-size-xl: 2.6rem;
 
 	// BORDER
-	--border-radius-small: 3px;
 	--border-radius-medium: 1rem;
-	--border-radius-big: 10rem;
-
-	// LINE
-	// --line: 1px solid --color-gray-dark-1;
-	// --line-dark: 1px solid --color-secondary-dark;
 }

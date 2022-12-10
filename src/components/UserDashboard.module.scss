@@ -98,18 +98,17 @@
 		border: none;
 		cursor: pointer;
 		font-size: var(--font-size-xl);
-
-		box-shadow: 0px 15px 10px -10px #fff;
+		transition: transform 0.2s ease, box-shadow 0.3s ease;
 
 		&:active {
-			box-shadow: 0 1rem 1.3rem -0.6rem #fff;
+			transform: translateY(2px);
 		}
 
 		.first_word,
 		.last_word {
 			display: inline-block;
 			position: relative;
-			@include transition(transform, 0.3s, ease);
+			transition: transform 0.3s ease;
 
 			&:before {
 				position: absolute;
@@ -132,6 +131,8 @@
 			}
 		}
 		&:hover {
+			box-shadow: var(--shadow-white-underline);
+
 			.first_word {
 				transform: translateY(-100%);
 			}
