@@ -1,5 +1,6 @@
 import InlineLink from './InlineLink';
 import classes from './Repo.module.scss';
+import IconSvg from './UI/IconSvg';
 
 type RepoProps = {
 	link: string;
@@ -19,7 +20,10 @@ const Repo = (props: RepoProps) => {
 			<div className={classes.repo__lang}>
 				{props.language ? props.language : '-'}
 			</div>
-			<div className={classes.repo__stars}>{props.stars}⭐</div>
+			<div className={classes.repo__stars}>
+				{props.stars}
+				<IconSvg className={classes['repo__star-icon']} name="icon-star" />
+			</div>
 		</div>
 	);
 };

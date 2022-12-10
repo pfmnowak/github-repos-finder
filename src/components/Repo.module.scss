@@ -21,6 +21,10 @@
 		color: var(--color-primary-light);
 	}
 
+	&:hover &__star-icon {
+		fill: var(--color-primary-dark);
+	}
+
 	& > * {
 		color: inherit;
 		padding: 1.1rem;
@@ -52,8 +56,19 @@
 
 	&__stars {
 		width: 10rem;
-		text-align: center;
 		overflow: hidden;
 		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__star-icon {
+		flex: 0 0 auto;
+		width: 2.3rem;
+		height: 2.3rem;
+		fill: var(--color-primary);
+		margin-left: 0.3rem;
+		margin-bottom: 0.1rem;
 	}
 }

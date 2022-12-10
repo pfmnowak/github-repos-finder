@@ -73,10 +73,10 @@
 		@include respond(phone) {
 			flex: 0 0 100%;
 		}
+	}
 
-		&:hover &__detail-icon {
-			fill: var(--color-primary-dark);
-		}
+	&__detail:hover &__detail-icon {
+		fill: var(--color-primary-dark);
 	}
 
 	&__detail-icon {
