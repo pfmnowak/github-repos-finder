@@ -50,6 +50,7 @@ export async function getAllRepositories(username) {
 				language: repo.language,
 				stars: repo.stargazers_count,
 				link: repo.html_url,
+				homepage: repo.homepage,
 			};
 		});
 

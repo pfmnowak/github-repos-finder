@@ -1,8 +1,14 @@
+@import '../sass/main.scss';
+
 .repo {
 	display: flex;
 	font-size: var(--font-size-large);
 	margin: 1rem 0;
 	border-radius: var(--border-radius-medium);
+
+	@include respond(phone) {
+		flex-wrap: wrap;
+	}
 
 	background-image: linear-gradient(
 		to left,
@@ -35,16 +41,37 @@
 	}
 
 	&__name {
-		flex-grow: 1;
-		flex-shrink: 1;
+		flex: 1 1 auto;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		padding-left: 1.5rem;
 
+		@include respond(phone) {
+			flex: 0 0 100%;
+			text-align: center;
+			font-size: var(--font-size-xl);
+			border-right: none !important;
+			border-bottom: 1px solid var(--color-secondary-light);
+			padding: 2rem 0;
+			color: var(--color-primary-light);
+		}
+
 		& a {
 			color: inherit;
 		}
+	}
+
+	&__homepage {
+		width: 7rem;
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__homepage-link {
+		display: flex;
 	}
 
 	&__lang {
@@ -52,6 +79,10 @@
 		text-align: center;
 		overflow: hidden;
 		flex: 0 0 auto;
+
+		@include respond(phone) {
+			flex: 1 0 auto;
+		}
 	}
 
 	&__stars {
@@ -69,6 +100,17 @@
 		height: 2.3rem;
 		fill: var(--color-primary);
 		margin-left: 0.3rem;
-		margin-bottom: 0.1rem;
+		margin-bottom: 0.2rem;
+	}
+
+	&__globe-icon {
+		flex: 0 0 auto;
+		width: 2.3rem;
+		height: 2.3rem;
+		fill: var(--color-primary);
+
+		&:hover {
+			fill: var(--color-primary-light);
+		}
 	}
 }

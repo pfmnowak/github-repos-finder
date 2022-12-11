@@ -8,6 +8,7 @@ type ReposContainerProps = {
 			name: string;
 			language: string;
 			stars: number;
+			homepage: string;
 		}
 	];
 };
