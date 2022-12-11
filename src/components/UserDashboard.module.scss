@@ -61,6 +61,11 @@
 		padding: 2rem;
 		margin-bottom: 2rem;
 		overflow: hidden;
+
+		@include respond(phone) {
+			flex-direction: column;
+			align-content: center;
+		}
 	}
 
 	&__detail {
@@ -70,13 +75,11 @@
 		display: flex;
 		margin: 1rem 0;
 
-		@include respond(phone) {
-			flex: 0 0 100%;
+		@include hover-supported() {
+			.dashboard__detail-icon {
+				fill: var(--color-primary-dark);
+			}
 		}
-	}
-
-	&__detail:hover &__detail-icon {
-		fill: var(--color-primary-dark);
 	}
 
 	&__detail-icon {
@@ -99,6 +102,11 @@
 		cursor: pointer;
 		font-size: var(--font-size-xl);
 		transition: transform 0.2s ease, box-shadow 0.3s ease;
+		user-select: none;
+
+		@include touch-only() {
+			box-shadow: var(--shadow-white-underline);
+		}
 
 		&:active {
 			transform: translateY(2px);
@@ -130,7 +138,7 @@
 				color: var(--color-primary);
 			}
 		}
-		&:hover {
+		@include hover-supported() {
 			box-shadow: var(--shadow-white-underline);
 
 			.first_word {

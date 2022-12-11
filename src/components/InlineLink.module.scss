@@ -21,7 +21,7 @@
 		border-bottom: 2px solid var(--color-primary-light);
 		transition: width 0.3s ease;
 
-		@include respond(phone) {
+		@include touch-only() {
 			width: 100%;
 		}
 	}

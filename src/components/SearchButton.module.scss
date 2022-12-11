@@ -8,7 +8,7 @@
 		width: 4.3rem;
 		height: 4.3rem;
 		background-color: var(--color-primary);
-		color: var(--color-secondary-dark);
+		fill: var(--color-secondary-dark);
 		font-weight: 700;
 		border-radius: 50%;
 		transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -17,7 +17,7 @@
 			margin: 1rem;
 		}
 
-		&:hover {
+		@include hover-supported() {
 			cursor: pointer;
 			background-color: var(--color-secondary-dark);
 			fill: var(--color-primary);

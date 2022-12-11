@@ -17,18 +17,17 @@
 		var(--color-secondary-dark) 75%
 	);
 
-	&:hover {
+	@include hover-supported() {
 		color: var(--color-tertiary);
 		background-image: none;
 		background-color: var(--color-secondary-dark);
-	}
 
-	&:hover &__name a {
-		color: var(--color-primary-light);
-	}
-
-	&:hover &__star-icon {
-		fill: var(--color-primary-dark);
+		.repo__name a {
+			color: var(--color-primary-light);
+		}
+		.repo__star-icon {
+			fill: var(--color-primary-dark);
+		}
 	}
 
 	& > * {
@@ -53,7 +52,7 @@
 			font-size: var(--font-size-xl);
 			border-right: none !important;
 			border-bottom: 1px solid var(--color-secondary-light);
-			padding: 2rem 0;
+			padding: 2rem 1rem;
 			color: var(--color-primary-light);
 		}
 
@@ -109,7 +108,7 @@
 		height: 2.3rem;
 		fill: var(--color-primary);
 
-		&:hover {
+		@include hover-supported() {
 			fill: var(--color-primary-light);
 		}
 	}

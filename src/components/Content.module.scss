@@ -100,4 +100,19 @@
 		color: var(--color-tertiary-light);
 		color: var(--color-secondary-dark);
 	}
+
+	@include touch-only() {
+		&__circle {
+			width: 100%;
+		}
+
+		&__arrow {
+			background: var(--color-secondary-dark);
+			transform: translate(1rem, 0);
+		}
+
+		&__text {
+			color: var(--color-secondary-dark);
+		}
+	}
 }
