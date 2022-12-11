@@ -101,15 +101,13 @@
 		border: none;
 		cursor: pointer;
 		font-size: var(--font-size-xl);
+		box-shadow: var(--shadow-white-underline);
 		transition: transform 0.2s ease, box-shadow 0.3s ease;
 		user-select: none;
 
-		@include touch-only() {
-			box-shadow: var(--shadow-white-underline);
-		}
-
 		&:active {
 			transform: translateY(2px);
+			box-shadow: var(--shadow-white-underline-big);
 		}
 
 		.first_word,
@@ -139,8 +137,6 @@
 			}
 		}
 		@include hover-supported() {
-			box-shadow: var(--shadow-white-underline);
-
 			.first_word {
 				transform: translateY(-100%);
 			}
