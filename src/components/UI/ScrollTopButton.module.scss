@@ -27,9 +27,7 @@
 		transform: translateY(-5px);
 		background-color: var(--color-secondary-dark);
 		box-shadow: rgba(0, 0, 0, 0.8) 0 2rem 2rem -1rem;
-	}
 
-	@include hover-supported() {
 		.scroll-top-btn__arrow {
 			fill: var(--color-primary);
 		}
