@@ -29,7 +29,6 @@ const UserDashboard = (props: UserDashboardProps) => {
 	return (
 		<div className={classes.dashboard}>
 			<BackgroundImage
-				// Photo by <a href="https://unsplash.com/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rubaitul Azad</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 				link={require('../img/github-background-min.jpg')}
 				alt="Background image with a GitHub Logo"
 			/>

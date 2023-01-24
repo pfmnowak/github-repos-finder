@@ -16,16 +16,13 @@ const Footer = () => {
 					<br />
 					Background GitHub logo image by{' '}
 					<InlineLink
-						link="https://unsplash.com/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-						title="Image author"
+						link="https://unsplash.com/@rubaitulazad"
+						title="Author of the background image"
 					>
 						Rubaitul Azad
 					</InlineLink>{' '}
 					on{' '}
-					<InlineLink
-						link="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-						title="Unsplash page"
-					>
+					<InlineLink link="https://unsplash.com/" title="Unsplash page">
 						Unsplash
 					</InlineLink>
 					.
