@@ -9,8 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React
 - TypeScript
 - SASS (SCSS)
-- JavaScript ES6 features
-- flexbox
+- Modern JavaScript features
+- Flexbox
 - SVG
 
 ## Running the application
@@ -27,7 +27,6 @@ You can also test it live here: https://pfmnowak.github.io/github-repos-finder/
 
 ## Possible improvements ToDo
 
-- Improve the styling!
 - Add Unit Tests
 
 ## Available Scripts
